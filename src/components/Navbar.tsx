@@ -10,6 +10,10 @@ const Navbar = () => {
         setIsOpen(!isOpen);
     };
 
+    const closeMenu = () => {
+        setIsOpen(false);
+    };
+
     return (
         <nav className="bg-white shadow-md fixed w-full z-10">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -85,16 +89,16 @@ const Navbar = () => {
 
             <div className={`${isOpen ? 'block' : 'hidden'} md:hidden`} id="mobile-menu">
                 <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                    <Link href="/" className="text-gray-700 hover:bg-gray-100 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">
+                    <Link href="/" onClick={closeMenu} className="text-gray-700 hover:bg-gray-100 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">
                         Home
                     </Link>
-                    <Link href="/about" className="text-gray-700 hover:bg-gray-100 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">
+                    <Link href="/about" onClick={closeMenu} className="text-gray-700 hover:bg-gray-100 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">
                         About
                     </Link>
-                    <Link href="/project" className="text-gray-700 hover:bg-gray-100 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">
+                    <Link href="/project" onClick={closeMenu} className="text-gray-700 hover:bg-gray-100 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">
                         Project
                     </Link>
-                    <Link href="/contact" className="text-gray-700 hover:bg-gray-100 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">
+                    <Link href="/contact" onClick={closeMenu} className="text-gray-700 hover:bg-gray-100 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">
                         Contact
                     </Link>
                 </div>
