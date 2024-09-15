@@ -22,25 +22,27 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   buttonOnClick
 }) => {
   return (
-    <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-      <div className="relative h-48">
-        <Image
-          src={imageSrc}
-          alt={imageAlt}
-          className="object-cover w-full h-full"
-          layout="fill"
-        />
+    <>
+      <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out overflow-hidden max-w-sm mx-auto">
+        <div className="relative h-40">
+          <Image
+            src={imageSrc}
+            alt={imageAlt}
+            className="object-cover w-full h-full"
+            layout="fill"
+          />
+        </div>
+        <div className="p-4">
+          <h3 className="text-xl font-bold text-gray-800 mb-2">{title}</h3>
+          <p className="text-gray-600 mb-4">{description}</p>
+          {buttonText && (
+            <div className="my-6">
+              <Button text={buttonText} href={buttonLink} onClick={buttonOnClick} />
+            </div>
+          )}
+        </div>
       </div>
-      <div className="p-6">
-        <h3 className="text-2xl font-bold text-gray-800 mb-4">{title}</h3>
-        <p className="text-gray-600 mb-6">{description}</p>
-        {buttonText && (
-          <div className="mt-4">
-            <Button text={buttonText} href={buttonLink} onClick={buttonOnClick} />
-          </div>
-        )}
-      </div>
-    </div>
+    </>
   );
 };
 

@@ -57,9 +57,10 @@ export default function Home() {
 
       {/* Projects Section */}
       <section className="py-20 bg-gray-100">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-gray-800 mb-8 text-center">Projects</h2>
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="container mx-auto px-6 lg:px-16">
+          <h2 className="text-4xl font-bold text-gray-800 mb-12 text-center">Projects</h2>
+
+          <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {projects.map((project, index) => (
               <ProjectCard
                 key={index}
@@ -74,6 +75,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+
 
       {/* Contact Section */}
       <section className="bg-blue-600 text-white py-20">
