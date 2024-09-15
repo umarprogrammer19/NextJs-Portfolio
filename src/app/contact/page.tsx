@@ -3,7 +3,7 @@ import { FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 
 const Contact: React.FC = () => {
     return (
-        <section className="p-16 bg-gray-100">
+        <section className="py-20 bg-gray-100">
             <div className="container mx-auto px-4 lg:px-12">
                 <h2 className="text-4xl font-bold text-gray-800 mb-12 text-center">Contact Us</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
