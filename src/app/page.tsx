@@ -40,7 +40,7 @@ export default function Home() {
         heading="Hi, I'm Umar Farooq"
         text="I'm a passionate developer who loves crafting exceptional digital experiences. I build websites and applications that are both functional and aesthetically pleasing."
         buttonText="View My Work"
-        buttonLink="/projects"
+        buttonLink="/project"
         marginTop={true}
         reverse={true}
         isCircular={true}
